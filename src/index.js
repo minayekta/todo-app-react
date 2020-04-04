@@ -1,34 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Typography from '@material-ui/core/Typography';
-import TodoForm from './TodoForm';
-import TodoList from './TodoList';
-import useTodoState from './useTodoState';
-import './styles.css';
+import './index.css';
+import App from '../src/components/App';
 
-const App = () => {
-  const { todos, addTodo, deleteTodo } = useTodoState([]);
+ReactDOM.render(<App />, document.getElementById('root'));
 
-  return (
-    <div className="App">
-      <Typography component="h1" variant="h2">
-        Todos
-      </Typography>
 
-      <TodoForm
-        saveTodo={todoText => {
-          const trimmedText = todoText.trim();
-
-          if (trimmedText.length > 0) {
-            addTodo(trimmedText);
-          }
-        }}
-      />
-
-      <TodoList todos={todos} deleteTodo={deleteTodo} />
-    </div>
-  );
-};
-
-const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
