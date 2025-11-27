@@ -10,7 +10,7 @@
     "bootstrap": "^4.4.1",
     "react": "^16.7.0-alpha.0",
     "react-dom": "^16.7.0-alpha.0",
-    "react-scripts": "2.0.3",
+    "react-scripts": "5.0.1",
     "reactstrap": "^8.4.1",
     "uuid": "^7.0.3"
   },
